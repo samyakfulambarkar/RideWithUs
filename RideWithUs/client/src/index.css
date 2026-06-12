@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.01em;
+  }
+
+  .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar       { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: #1e3a5f;
+    border-radius: 999px;
+    transition: background 0.2s;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: #2d5a8e; }
+}
+
+/* ── Google Maps Autocomplete ── */
+.pac-container {
+  position: absolute !important;
+  z-index: 9999 !important;
+  background: #0f172a !important;
+  border: 1px solid #1e3a5f !important;
+  border-radius: 14px !important;
+  margin-top: 6px !important;
+  font-family: 'Inter', sans-serif !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(30, 58, 95, 0.3) !important;
+  overflow: hidden !important;
+  padding: 4px !important;
+}
+
+.pac-item {
+  padding: 10px 12px !important;
+  color: #94a3b8 !important;
+  border-top: none !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  transition: background 0.15s, color 0.15s !important;
+  margin-bottom: 2px !important;
+}
+
+.pac-item:first-child { border-top: none !important; }
+
+.pac-item:hover,
+.pac-item-selected {
+  background: #1e3a5f !important;
+  color: #e2e8f0 !important;
+}
+
+.pac-item-query {
+  color: #f1f5f9 !important;
+  font-weight: 500 !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+.pac-matched {
+  color: #60a5fa !important;
+  font-weight: 600 !important;
+}
+
+.pac-icon { filter: invert(0.6) sepia(1) saturate(2) hue-rotate(190deg); }
+.pac-logo::after { display: none !important; }
+
+/* ── Date / Time inputs ── */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.5) sepia(1) saturate(1.5) hue-rotate(190deg);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover,
+input[type="time"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* ── Number inputs ── */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] { -moz-appearance: textfield; }

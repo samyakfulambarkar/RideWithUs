@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RideWithUs - Home</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">RideWithUs</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Account ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="bookings.html">Bookings</a></li>
+            <li><a href="personal-info.html">Personal Information</a></li>
+            <li><a href="user-panel.html">User Panel</a></li>
+            <li><a href="driver-panel.html">Driver Panel</a></li>
+            <li><a href="cancel-ride.html">Cancel Ride</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Book Your Ride</h1>
+    <form class="booking-form">
+      <label>Leaving From:</label>
+      <input type="text" placeholder="Enter city" required>
+      
+      <label>Going To:</label>
+      <input type="text" placeholder="Enter destination" required>
+      
+      <label>Date:</label>
+      <input type="date" required>
+      
+      <label>Fare:</label>
+      <input type="number" placeholder="Fare in ₹" required>
+      
+      <button type="submit">Search Rides</button>
+    </form>
+  </main>
+</body>
+</html>
